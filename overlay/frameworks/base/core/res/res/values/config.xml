@@ -519,6 +519,7 @@
          To facilitate writing device-independent emulation overlays, the marker `@dp` can be
          appended after the path string to interpret coordinates in dp instead of px units.
          Note that a physical cutout should be configured in pixels for the best results.
+
          Example for a 10px x 10px square top-center cutout:
                 <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z</string>
          Example for a 10dp x 10dp square top-center cutout:
@@ -530,4 +531,36 @@
     <!-- Height of the status bar -->
     <dimen name="status_bar_height_portrait">80.0px</dimen>
     <dimen name="status_bar_height_landscape">24.0dp</dimen>
+
+    -->
+     <string translatable="false" name="config_mainBuiltInDisplayCutout">M -70,0 L -70,76 L 70,76 L 70,0 Z</string>
+
+    <!-- Height of the status bar -->
+    <dimen name="status_bar_height_portrait">32.0dip</dimen>
+
+    <!-- Enables or disables haptic effect when the text insertion/selection handle is moved
+          manually by the user. Off by default, since the expected haptic feedback may not be
+          available on some devices. -->
+    <bool name="config_enableHapticTextHandle">true</bool>
+
+    <!-- Whether device supports double tap to wake -->
+    <bool name="config_supportDoubleTapWake">true</bool>
+
+    <!-- Whether to cleanup fingerprints upon connection to the daemon and when user switches -->
+    <bool name="config_cleanupUnusedFingerprints">false</bool>
+
+    <!-- Whether to post reset runnable for all clients. Needed for some older
+         vendor fingerprint HAL implementations. -->
+    <bool name="config_fingerprintPostResetRunnableForAllClients">true</bool>
+
+    <!-- Whether device ignores the RSSNR signal implementation -->
+    <bool name="config_ignoreRssnrSignalLevel">true</bool>
+
+    <!-- True if the firmware supports connected MAC randomization -->
+    <bool name="config_wifi_connected_mac_randomization_supported">true</bool>
+
+    <!-- Component name of the default wallpaper. This will be ImageWallpaper if not
+         specified -->
+    <string name="default_wallpaper_component" translatable="false">com.breel.wallpapers19/com.breel.wallpapers19.doodle.wallpaper.variations.DoodleWallpaperV1</string>
+
 </resources>
